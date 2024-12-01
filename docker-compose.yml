@@ -1,23 +1,13 @@
-version: '2.2'
+version: "3.8"
 
 services:
-  sqlserver:
-    image: mcr.microsoft.com/mssql/server:2022-latest
-    env_file:
-      - .env
+  dcs-postgres:
+    image: postgres:15.3-alpine
+    container_name: dcs-postgres
     environment:
-      SA_PASSWORD: ${SA_PASSWORD}
-      ACCEPT_EULA: "Y"
-      MSSQL_PID: "Developer"
+      POSTGRES_PASSWORD: Postgres2024!
+      POSTGRES_USER: postgres
     ports:
-      - "1433:1433"
-  mssqltools:
-    env_file:
-      - .env
-    image: mcr.microsoft.com/mssql-tools
-    depends_on:
-      - sqlserver
+      - 5433:5432
     volumes:
-      - ./create-db-and-tables.sql:/tmp/create-db-and-tables.sql
-      - ./init-database.sh:/tmp/init-database.sh
-    command: /bin/bash ./tmp/init-database.sh
+      - ./script/create-db-and-tables.sql:/docker-entrypoint-initdb.d/create-db-and-tables.sql
