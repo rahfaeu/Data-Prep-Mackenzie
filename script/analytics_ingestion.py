@@ -5,7 +5,7 @@ from psycopg2.extras import execute_values
 
 # Configurações do banco de dados
 DB_CONFIG = {
-    "dbname": "olistdb",
+    "dbname": "olist_dbt",
     "user": "postgres",
     "password": "Postgres2024!",
     "host": "localhost",

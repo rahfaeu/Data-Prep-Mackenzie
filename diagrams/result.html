@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ <meta name="Author" content="Made by 'tree'">
+ <meta name="GENERATOR" content="$Version: $ tree v1.8.0 (c) 1996 - 2018 by Steve Baker, Thomas Moore, Francesc Rocher, Florian Sesser, Kyosuke Tokoro $">
+ <title>Directory Tree</title>
+ <style type="text/css">
+  <!-- 
+  BODY { font-family : ariel, monospace, sans-serif; }
+  P { font-weight: normal; font-family : ariel, monospace, sans-serif; color: black; background-color: transparent;}
+  B { font-weight: normal; color: black; background-color: transparent;}
+  A:visited { font-weight : normal; text-decoration : none; background-color : transparent; margin : 0px 0px 0px 0px; padding : 0px 0px 0px 0px; display: inline; }
+  A:link    { font-weight : normal; text-decoration : none; margin : 0px 0px 0px 0px; padding : 0px 0px 0px 0px; display: inline; }
+  A:hover   { color : #000000; font-weight : normal; text-decoration : underline; background-color : yellow; margin : 0px 0px 0px 0px; padding : 0px 0px 0px 0px; display: inline; }
+  A:active  { color : #000000; font-weight: normal; background-color : transparent; margin : 0px 0px 0px 0px; padding : 0px 0px 0px 0px; display: inline; }
+  .VERSION { font-size: small; font-family : arial, sans-serif; }
+  .NORM  { color: black;  background-color: transparent;}
+  .FIFO  { color: purple; background-color: transparent;}
+  .CHAR  { color: yellow; background-color: transparent;}
+  .DIR   { color: blue;   background-color: transparent;}
+  .BLOCK { color: yellow; background-color: transparent;}
+  .LINK  { color: aqua;   background-color: transparent;}
+  .SOCK  { color: fuchsia;background-color: transparent;}
+  .EXEC  { color: green;  background-color: transparent;}
+  -->
+ </style>
+</head>
+<body>
+	<h1>Directory Tree</h1><p>
+	<a href="./">./</a><br>
+	├── <a href=".//README.md">README.md</a><br>
+	├── <a href=".//analyses/">analyses</a><br>
+	├── <a href=".//dbt_project.yml">dbt_project.yml</a><br>
+	├── <a href=".//logs/">logs</a><br>
+	│   └── <a href=".//logs/dbt.log">dbt.log</a><br>
+	├── <a href=".//macros/">macros</a><br>
+	├── <a href=".//models/">models</a><br>
+	│   └── <a href=".//models/olist/">olist</a><br>
+	│   &nbsp;&nbsp;&nbsp; ├── <a href=".//models/olist/dim_customers.sql">dim_customers.sql</a><br>
+	│   &nbsp;&nbsp;&nbsp; ├── <a href=".//models/olist/dim_products.sql">dim_products.sql</a><br>
+	│   &nbsp;&nbsp;&nbsp; ├── <a href=".//models/olist/dim_sellers.sql">dim_sellers.sql</a><br>
+	│   &nbsp;&nbsp;&nbsp; ├── <a href=".//models/olist/fact_orders.sql">fact_orders.sql</a><br>
+	│   &nbsp;&nbsp;&nbsp; ├── <a href=".//models/olist/source.yml">source.yml</a><br>
+	│   &nbsp;&nbsp;&nbsp; ├── <a href=".//models/olist/stg_olist_order_items_dataset.sql">stg_olist_order_items_dataset.sql</a><br>
+	│   &nbsp;&nbsp;&nbsp; └── <a href=".//models/olist/stg_olist_orders_dataset.sql">stg_olist_orders_dataset.sql</a><br>
+	├── <a href=".//result.html">result.html</a><br>
+	├── <a href=".//seeds/">seeds</a><br>
+	├── <a href=".//snapshots/">snapshots</a><br>
+	├── <a href=".//target/">target</a><br>
+	│   ├── <a href=".//target/compiled/">compiled</a><br>
+	│   │   └── <a href=".//target/compiled/olist_dbt/">olist_dbt</a><br>
+	│   │   &nbsp;&nbsp;&nbsp; └── <a href=".//target/compiled/olist_dbt/models/">models</a><br>
+	│   │   &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <a href=".//target/compiled/olist_dbt/models/example/">example</a><br>
+	│   │   &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │   ├── <a href=".//target/compiled/olist_dbt/models/example/my_first_dbt_model.sql">my_first_dbt_model.sql</a><br>
+	│   │   &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │   └── <a href=".//target/compiled/olist_dbt/models/example/my_second_dbt_model.sql">my_second_dbt_model.sql</a><br>
+	│   │   &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; └── <a href=".//target/compiled/olist_dbt/models/olist/">olist</a><br>
+	│   │   &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <a href=".//target/compiled/olist_dbt/models/olist/dim_olist_customers_dataset.sql">dim_olist_customers_dataset.sql</a><br>
+	│   │   &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <a href=".//target/compiled/olist_dbt/models/olist/dim_olist_products.sql">dim_olist_products.sql</a><br>
+	│   │   &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <a href=".//target/compiled/olist_dbt/models/olist/dim_olist_sellers_dataset.sql">dim_olist_sellers_dataset.sql</a><br>
+	│   │   &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <a href=".//target/compiled/olist_dbt/models/olist/fact_orders.sql">fact_orders.sql</a><br>
+	│   │   &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <a href=".//target/compiled/olist_dbt/models/olist/olist_orders_dataset.sql">olist_orders_dataset.sql</a><br>
+	│   │   &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <a href=".//target/compiled/olist_dbt/models/olist/olist_products.sql">olist_products.sql</a><br>
+	│   │   &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <a href=".//target/compiled/olist_dbt/models/olist/stg_olist_customers_dataset.sql">stg_olist_customers_dataset.sql</a><br>
+	│   │   &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <a href=".//target/compiled/olist_dbt/models/olist/stg_olist_order_items_dataset.sql">stg_olist_order_items_dataset.sql</a><br>
+	│   │   &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <a href=".//target/compiled/olist_dbt/models/olist/stg_olist_orders_dataset.sql">stg_olist_orders_dataset.sql</a><br>
+	│   │   &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <a href=".//target/compiled/olist_dbt/models/olist/stg_olist_products.sql">stg_olist_products.sql</a><br>
+	│   │   &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; └── <a href=".//target/compiled/olist_dbt/models/olist/stg_olist_sellers_dataset.sql">stg_olist_sellers_dataset.sql</a><br>
+	│   ├── <a href=".//target/graph.gpickle">graph.gpickle</a><br>
+	│   ├── <a href=".//target/graph_summary.json">graph_summary.json</a><br>
+	│   ├── <a href=".//target/manifest.json">manifest.json</a><br>
+	│   ├── <a href=".//target/partial_parse.msgpack">partial_parse.msgpack</a><br>
+	│   ├── <a href=".//target/run/">run</a><br>
+	│   │   └── <a href=".//target/run/olist_dbt/">olist_dbt</a><br>
+	│   │   &nbsp;&nbsp;&nbsp; └── <a href=".//target/run/olist_dbt/models/">models</a><br>
+	│   │   &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <a href=".//target/run/olist_dbt/models/example/">example</a><br>
+	│   │   &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │   ├── <a href=".//target/run/olist_dbt/models/example/my_first_dbt_model.sql">my_first_dbt_model.sql</a><br>
+	│   │   &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │   └── <a href=".//target/run/olist_dbt/models/example/my_second_dbt_model.sql">my_second_dbt_model.sql</a><br>
+	│   │   &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; └── <a href=".//target/run/olist_dbt/models/olist/">olist</a><br>
+	│   │   &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <a href=".//target/run/olist_dbt/models/olist/dim_olist_customers_dataset.sql">dim_olist_customers_dataset.sql</a><br>
+	│   │   &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <a href=".//target/run/olist_dbt/models/olist/dim_olist_products.sql">dim_olist_products.sql</a><br>
+	│   │   &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <a href=".//target/run/olist_dbt/models/olist/dim_olist_sellers_dataset.sql">dim_olist_sellers_dataset.sql</a><br>
+	│   │   &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <a href=".//target/run/olist_dbt/models/olist/fact_orders.sql">fact_orders.sql</a><br>
+	│   │   &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <a href=".//target/run/olist_dbt/models/olist/olist_orders_dataset.sql">olist_orders_dataset.sql</a><br>
+	│   │   &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <a href=".//target/run/olist_dbt/models/olist/olist_products.sql">olist_products.sql</a><br>
+	│   │   &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <a href=".//target/run/olist_dbt/models/olist/stg_olist_customers_dataset.sql">stg_olist_customers_dataset.sql</a><br>
+	│   │   &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <a href=".//target/run/olist_dbt/models/olist/stg_olist_order_items_dataset.sql">stg_olist_order_items_dataset.sql</a><br>
+	│   │   &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <a href=".//target/run/olist_dbt/models/olist/stg_olist_orders_dataset.sql">stg_olist_orders_dataset.sql</a><br>
+	│   │   &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <a href=".//target/run/olist_dbt/models/olist/stg_olist_products.sql">stg_olist_products.sql</a><br>
+	│   │   &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; └── <a href=".//target/run/olist_dbt/models/olist/stg_olist_sellers_dataset.sql">stg_olist_sellers_dataset.sql</a><br>
+	│   ├── <a href=".//target/run_results.json">run_results.json</a><br>
+	│   └── <a href=".//target/semantic_manifest.json">semantic_manifest.json</a><br>
+	└── <a href=".//tests/">tests</a><br>
+	<br><br>
+	</p>
+	<p>
+
+19 directories, 43 files
+	<br><br>
+	</p>
+	<hr>
+	<p class="VERSION">
+		 tree v1.8.0 © 1996 - 2018 by Steve Baker and Thomas Moore <br>
+		 HTML output hacked and copyleft © 1998 by Francesc Rocher <br>
+		 JSON output hacked and copyleft © 2014 by Florian Sesser <br>
+		 Charsets / OS/2 support © 2001 by Kyosuke Tokoro
+	</p>
+</body>
+</html>

@@ -1,6 +1,6 @@
-create database olistdb;
+create database olist_dbt;
 
-\c "olistdb";
+\c "olist_dbt";
 
 create table olist_orders_dataset (
 order_id varchar(33) primary key not null,
