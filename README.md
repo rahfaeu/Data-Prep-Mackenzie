@@ -152,39 +152,6 @@ Descreve os produtos:
 - `product_height_cm`
 - `product_width_cm`
 
----
-
-## Dimensão: `dim_category_name`
-
-Descreve as categorias de produtos:
-
-- `product_category_name` (PK)
-- `product_category_name_english`
-
----
-
-## Dimensão: `dim_reviews`
-
-Descreve as avaliações:
-
-- `review_id` (PK)
-- `review_score`
-- `review_comment_title`
-- `review_comment_message`
-- `review_creation_date`
-- `review_answer_timestamp`
-
----
-
-## Dimensão: `dim_geolocation`
-
-Descreve as localizações:
-
-- `geolocation_zip_code_prefix` (PK)
-- `geolocation_lat`
-- `geolocation_lng`
-- `geolocation_city`
-- `geolocation_state`
 
 ---------------------------------------
 
@@ -252,22 +219,4 @@ CREATE TABLE dim_products (
     product_height_cm DECIMAL(10, 2),
     product_width_cm DECIMAL(10, 2),
     FOREIGN KEY (product_category_name) REFERENCES dim_category_name(product_category_name)
-);
-
-
-## Tabela Dimensão: `dim_category_name`
-CREATE TABLE dim_category_name (
-    product_category_name VARCHAR(255) NOT NULL PRIMARY KEY,
-    product_category_name_english VARCHAR(255)
-);
-
-
-## Tabela Dimensão: `dim_reviews`
-CREATE TABLE dim_reviews (
-    review_id BIGINT NOT NULL PRIMARY KEY,
-    review_score INT,
-    review_comment_title TEXT,
-    review_comment_message TEXT,
-    review_creation_date TIMESTAMP,
-    review_answer_timestamp TIMESTAMP
 );
